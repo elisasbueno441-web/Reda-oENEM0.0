@@ -1,0 +1,598 @@
+/* ============================================
+   ESTILO2.CSS
+   Repertórios e Temas
+   CSS utilizando somente TAGS
+   ============================================ */
+
+
+/* ---------- CONFIGURAÇÃO GERAL ---------- */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background:linear-gradient(#a3f5c86e, #e0facac2);
+  color: #2d2d2d;
+  line-height: 1.6;
+}
+
+
+body>header>div,
+body>section>div,
+main>div,
+body>footer>div {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+
+
+/* ---------- CABEÇALHO ---------- */
+
+header {
+  background-color: #0a522e;
+  padding: 18px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-name: runrep;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
+
+
+header>div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+
+header span {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  color: #f5f3ef;
+}
+
+
+header span strong {
+  color: #7ec8a0;
+}
+
+
+header nav {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+
+header nav a {
+  color: #c8dce8;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+
+header nav a:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+
+
+/* ---------- TOPO ---------- */
+
+body>section {
+  background: linear-gradient(135deg, #0a8347 0%, #1c776b 60%, #134c66 100%);
+  color: #ffffff;
+  padding: 50px 0 44px;
+  text-align: center;
+}
+
+
+body>section p:first-child {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #7ec8a0;
+  margin-bottom: 12px;
+}
+
+
+body>section h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-name: textrunrep;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+
+}
+
+
+body>section p:last-child {
+  font-size: 16px;
+  color: #b8d4e8;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+
+
+/* ---------- CORPO ---------- */
+
+main {
+  padding: 60px 0 80px;
+}
+
+
+main>div:first-child {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+
+
+/* ---------- TÍTULOS ---------- */
+
+main section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  color: #1a3a5c;
+  margin-bottom: 6px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid #e5e0d8;
+}
+
+
+main section>p {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 24px;
+  line-height: 1.65;
+}
+
+
+
+/* =================================================
+   TEMAS
+   ================================================= */
+
+
+/* Área onde ficam os temas */
+
+main>div:first-child>section:first-child>div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+/* Cada tema */
+
+main>div:first-child>section:first-child button {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 16px 20px;
+  border: 1px solid #e5e0d8;
+  border-left: 4px solid #1a3a5c;
+  cursor: pointer;
+  text-align: left;
+  transition:
+    box-shadow 0.2s,
+    border-left-color 0.2s,
+    transform 0.2s;
+  font-family: 'Poppins', sans-serif;
+  color: #24527a;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+
+main>div:first-child>section:first-child button:hover {
+  box-shadow: 0 4px 16px rgba(26, 58, 92, 0.1);
+  border-left-color: #7ec8a0;
+  transform: translateX(3px);
+}
+
+
+/* Nome do tema */
+
+main>div:first-child>section:first-child button strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a3a5c;
+  letter-spacing: normal;
+  text-transform: none;
+  margin-top: 5px;
+  margin-bottom: 4px;
+}
+
+
+/* Descrição do tema */
+
+main>div:first-child>section:first-child button span {
+  display: block;
+  font-size: 13px;
+  color: #6b7280;
+  font-weight: 400;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+
+/* Botão Todos */
+
+main>div:first-child>section:first-child button:last-child {
+  background-color: #1a3a5c;
+  color: #ffffff;
+  border-left-color: #7ec8a0;
+  text-align: center;
+}
+
+
+main>div:first-child>section:first-child button:last-child:hover {
+  background-color: #24527a;
+}
+
+
+
+/* =================================================
+   REPERTÓRIOS
+   ================================================= */
+
+
+/* Campo de busca */
+
+main>div:first-child>section:nth-child(2)>input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  background-color: #ffffff;
+  border: 1px solid #e5e0d8;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  outline: none;
+}
+
+
+main>div:first-child>section:nth-child(2)>input:focus {
+  border-color: #1a3a5c;
+  box-shadow: 0 0 0 2px rgba(26, 58, 92, 0.08);
+}
+
+
+
+/* Categorias */
+
+main>div:first-child>section:nth-child(2)>nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+
+main>div:first-child>section:nth-child(2)>nav button {
+  padding: 8px 12px;
+  background-color: transparent;
+  border: 1px solid #e5e0d8;
+  border-radius: 6px;
+  color: #6b7280;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+}
+
+
+main>div:first-child>section:nth-child(2)>nav button:hover {
+  background-color: #1a3a5c;
+  color: #ffffff;
+  border-color: #1a3a5c;
+}
+
+
+
+/* Contador */
+main>div:first-child>section:nth-child(2)>p:nth-of-type(2) {
+  font-size: 12px;
+  color: #9ca3af;
+  margin-bottom: 15px;
+}
+
+
+
+/* Lista dos repertórios */
+
+main>div:first-child>section:nth-child(2)>div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+
+/* Card de repertório */
+
+main>div:first-child>section:nth-child(2)>div:last-child article {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid #e5e0d8;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+
+
+main>div:first-child>section:nth-child(2)>div:last-child article:hover {
+  box-shadow: 0 6px 20px rgba(26, 58, 92, 0.09);
+}
+
+
+
+/* Tipo do repertório */
+
+main>div:first-child>section:nth-child(2)>div:last-child article>span {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #9ca3af;
+  margin-bottom: 8px;
+}
+
+
+
+/* Citação */
+
+main>div:first-child>section:nth-child(2)>div:last-child article>blockquote {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  color: #1a3a5c;
+  font-style: italic;
+  line-height: 1.5;
+  margin-bottom: 8px;
+  padding-left: 14px;
+  border-left: 3px solid #7ec8a0;
+}
+
+
+
+/* Autor */
+main>div:first-child>section:nth-child(2)>div:last-child article>p:first-of-type {
+  font-size: 13px;
+  color: #6b7280;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+
+/* Utilização */
+main>div:first-child>section:nth-child(2)>div:last-child article>p:last-of-type {
+  font-size: 12px;
+  color: #9ca3af;
+  font-style: italic;
+}
+
+
+
+/* =================================================
+   BANNER
+   ================================================= */
+
+main > div:nth-child(2) {
+  max-width: 1100px;
+  margin: 48px auto 0;
+  padding: 0 24px;
+}
+
+
+main > div:nth-child(2) > article {
+  background: linear-gradient(135deg, #1e6b52, #2e8b57);
+  border-radius: 14px;
+  padding: 32px 36px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  box-sizing: border-box;
+}
+
+
+main > div:nth-child(2) > article > span {
+  font-size: 48px;
+  flex-shrink: 0;
+}
+
+
+main > div:nth-child(2) > article > div {
+  flex: 1;
+}
+
+
+main > div:nth-child(2) > article > div > h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  margin-bottom: 6px;
+  color: #ffffff;
+}
+
+
+main > div:nth-child(2) > article > div > p {
+  font-size: 14px;
+  color: #b8e8d0;
+  line-height: 1.65;
+  margin-bottom: 0;
+}
+
+
+main > div:nth-child(2) > article > div > a {
+  display: inline-block;
+  margin-top: 14px;
+  background-color: #ffffff;
+  color: #1e6b52;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+
+main > div:nth-child(2) > article > div > a:hover {
+  transform: translateY(-2px);
+}
+
+/* ================================
+Imagens
+===================================*/
+main>section:nth-child(3) {
+   display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  width: 90%;
+  margin: 40px auto;
+  flex-wrap: wrap;
+}
+
+main>section:nth-child(3)>div{
+   width: 250px;
+  background-color: #eafafa;
+  border: 1px solid rgb(4, 92, 16);
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.7s ease;
+}
+
+main>section:nth-child(3)>div:hover{
+  transform:scale(1.1);
+  filter: brightness(5%), contrast(6%);
+}
+
+main > section:nth-child(3) > div > a {
+  display: block;
+  width: 100%;
+}
+
+main > section:nth-child(3) > div > a > img {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+
+main>section:nth-child(3)>div>p{
+ font-size: 13px;
+  color: #47515c;
+  margin: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+/* =================================================
+   RODAPÉ
+   ================================================= */
+
+footer {
+  background-color: #0a522e;
+  color: #8bafc8;
+  text-align: center;
+  padding: 28px 0;
+  font-size: 13px;
+}
+
+
+
+/* =================================================
+   RESPONSIVO
+   ================================================= */
+
+@media (max-width: 900px) {
+
+  main>div:first-child {
+    grid-template-columns: 1fr;
+  }
+
+  body>section h1 {
+    font-size: 28px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  body>section h1 {
+    font-size: 24px;
+  }
+
+  header>div {
+    flex-direction: column;
+  }
+
+  main>div:last-child article {
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+}
+
+@keyframes runrep {
+
+  /*Sempre está relacionado a uma animação*/
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes textrunrep {
+
+  /*Sempre está relacionado a uma animação*/
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

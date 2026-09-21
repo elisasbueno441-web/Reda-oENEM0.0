@@ -1,0 +1,378 @@
+/* ============================================
+   ESTILO.CSS — Página Inicial (index.html)
+   Redação Pro
+   ============================================ */
+
+/* ---------- Fontes e reset básico ---------- */
+* {
+  box-sizing: border-box;
+  /*serve para definir como a largura (width) e a altura (height) de um elemento são calculadas.*/
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f3ef;
+  color: #2d2d2d;
+  line-height: 1.6;
+}
+
+/* ---------- Container central ---------- */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- CABEÇALHO ---------- */
+.cabecalho {
+  background-color: #0a522e;
+  padding: 18px 0;
+  position: sticky;
+  /* modo de posicionamento híbrido*/
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  /*sombra*/animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-name: run;
+  animation-fill-mode: forwards;
+  
+}
+
+.cabecalho .container {
+  /*seletor descendente.*/
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /*Define que os itens devem quebrar para a próxima linha quando não houver mais espaço na largura do contêiner*/
+  gap: 12px;
+  /*Espaçamento*/
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-icone {
+  font-size: 28px;
+}
+
+.logo-texto {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  color: #f5f3ef;
+  letter-spacing: 0.5px;
+}
+
+.logo-texto strong {
+  color: #99ebbf;
+}
+
+/* Menu de navegação */
+.nav {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  color: #c8dce8;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 6px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.nav a:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+/* ---------- SEÇÃO HERO ---------- */
+
+.movetext{
+   display: inline-block; /* Garante que o efeito de movimento funcione corretamente no h1 */
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-name: textrun;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  
+}
+
+.hero {
+  background: linear-gradient(135deg, #0a8347 0%, #1c776b 60%, #134c66 100%);
+  color: #ffffff;
+  padding: 90px 0 80px;
+  text-align: center;
+}
+
+.hero-etiqueta {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #99f3c3;
+  margin-bottom: 18px;
+}
+
+.hero-titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.hero-subtitulo {
+  font-size: 17px;
+  color: #b8d4e8;
+  max-width: 560px;
+  margin: 0 auto 36px;
+  line-height: 1.7;
+}
+
+.botao-primario {
+  display: inline-block;
+  background-color: #6cc495;
+  color: #1a3a5c;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 14px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.2s, transform 0.2s;
+  box-shadow: 0 4px 14px rgba(137, 240, 185, 0.4);
+}
+
+.botao-primario:hover {
+  background-color: #93fac6;
+  transform: translateY(-2px);
+}
+
+/* ---------- SEÇÃO TÓPICOS ---------- */
+.topicos {
+  padding: 80px 0 90px;
+}
+
+.secao-titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: #1a3a5c;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.secao-subtitulo {
+  text-align: center;
+  color: #6b7280;
+  font-size: 15px;
+  margin-bottom: 52px;
+}
+
+
+/* Grid de cards/lista */
+ul {
+  list-style-image: url(../Imagens/teste.png);
+  list-style-position: inside;
+  /* Faz o ícone entrar na área do card */
+  padding-left: 0px;
+  padding-bottom: 0px;
+  z-index: 100;
+
+}
+
+.cards-grid {
+  display: grid;
+  /*como um elemento HTML é exibido na página e como seus elementos filhos se comportam em relação a ele,Eu poderia usar flex aqui?*/
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* Card individual */
+.card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 36px 28px;
+  text-decoration: none;
+  color: #2d2d2d;
+  border: 1px solid #e5e0d8;
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+  display: flex;
+  flex-direction: column;
+  /*deixa os elementos organizados em coluna*/
+  gap: 12px;
+  position: relative;
+  /*overflow: hidden;*/
+  margin: 10px;
+}
+
+.card::before {
+  /*pseudo-elemento cria um elemnto fantasma*/
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #1a3a5c, #7ec8a0);
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(26, 58, 92, 0.233);
+  border-color: #c8dce8;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/*.card-numero {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #9ca3af;
+  text-transform: uppercase;
+}*/
+
+.card-icone {
+  font-size: 36px;
+  line-height: 1;
+}
+
+.card-titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a3a5c;
+  line-height: 1.35;
+}
+
+.card-descricao {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.65;
+  flex: 1;
+}
+
+.card-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2e8b57;
+  margin-top: 8px;
+  transition: letter-spacing 0.2s;
+}
+
+.card:hover .card-link {
+  letter-spacing: 0.5px;
+}
+
+/*----------Logo Fixa----------*/
+.fundoimg{
+    background-color: rgb(253, 253, 244);
+    
+    /* Move o posicionamento fixo para a DIV container */
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    
+    /* Define o tamanho da área do fundo */
+    width: 100px; 
+    height: auto;
+    
+    /* Opcional: adiciona um espaço ao redor da logo para o fundo aparecer */
+    padding: 10px; 
+    border-radius: 8px; /* deixa os cantos do fundo arredondados */
+}
+
+
+.imgfixa{
+    display: block;
+    width: 100%;  /* Faz a imagem ocupar todo o espaço interno da div */
+    height: auto; /* Mantém a proporção correta sem distorcer */
+
+}
+
+.imgfixa:hover{
+    filter:brightness(1.2);
+    transition: all 0.7s;
+    transform: scale(1.5);
+
+}
+
+/* ---------- RODAPÉ ---------- */
+.rodape {
+  background-color: #0a522e;
+  color: #8bafc8;
+  text-align: center;
+  padding: 28px 0;
+  font-size: 13px;
+}
+
+/* ---------- RESPONSIVO ---------- */
+@media (max-width: 900px) {
+  .hero-titulo {
+    font-size: 36px;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 60px 0 50px;
+  }
+
+  .hero-titulo {
+    font-size: 28px;
+  }
+
+  .nav {
+    gap: 4px;
+  }
+
+  .nav a {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}
+
+@keyframes run{/*Sempre está relacionado a uma animação*/
+    from{
+        transform: translateY(-20px);
+        opacity:0;
+    }
+    to{
+        transform:translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes textrun{/*Sempre está relacionado a uma animação*/
+    from{
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to{
+        transform:translateX(0);
+        opacity:1;
+    }
+}

@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enviar Redação — Redação Pro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap" />
+
+  <!-- ============================================
+       FORMATAÇÃO INCORPORADA — Página 2
+       Todas as regras de estilo estão aqui dentro
+       para facilitar edição e aprendizado.
+       ============================================ -->
+  <style>
+    /* ---------- Reset e base ---------- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f3ef;
+      color: #2d2d2d;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ---------- CABEÇALHO ---------- */
+    .cabecalho {
+      background-color: #0a522e;
+      padding: 18px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+      animation-timing-function: ease-out;
+      animation-iteration-count: 1;
+      animation-name: runtwo;
+      animation-fill-mode: forwards;
+      animation-duration: 2s;
+    }
+
+    .cabecalho .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .logo-texto {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      color: #f5f3ef;
+      text-decoration: none;
+    }
+
+    .logo-texto strong {
+      color: #7ec8a0;
+    }
+
+    .nav a {
+      color: #c8dce8;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+
+    .nav {
+      display: flex;
+      gap: 8px;
+    }
+
+    .nav a:hover {
+      background-color: rgba(255, 255, 255, 0.12);
+      color: #fff;
+    }
+
+    /* ---------- TOPO DA PÁGINA ---------- */
+    .pagina-topo {
+      background: linear-gradient(135deg, #0a8347 0%, #1c776b 60%, #134c66 100%);
+      color: #fff;
+      padding: 50px 0 44px;
+      text-align: center;
+    }
+
+    .pagina-topo .etiqueta {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #a1f0c6;
+      margin-bottom: 12px;
+    }
+
+    .pagina-topo h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 38px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .movetexttwo{
+   display: inline-block; /* Garante que o efeito de movimento funcione corretamente no h1 */
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-name: textruntwo;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  
+}
+
+
+    .pagina-topo p {
+      font-size: 16px;
+      color: #b8d4e8;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    /*Texto principal*/
+    .imgtext {
+      width: 150px;
+      height: auto;
+      float: right;
+      box-shadow: #021d0f;
+      border-radius: 50%;
+      transition: 0.5s ease;
+    }
+
+    .imgtext:hover {
+      transform: scale(1.1);
+
+    }
+
+    .tittextp{
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 10px;
+      margin-left: 150px;
+      margin-right: auto;
+      margin-top: 20px;
+      text-align: left;
+      font-size: 28px;
+      color: #01571d;
+
+
+    }
+
+    .textprincipal {
+      font-family: 'Poppins', sans-serif;
+      font-size: 20px;
+      text-align: left;
+      margin-left: 150px;
+      margin-top: 36px;
+      margin-right: auto;
+      font-size: 20px;
+      color: #6b7280;
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+
+    /* ---------- SEÇÃO PRINCIPAL ---------- */
+    .secao-formulario {
+      padding: 60px 0 80px;
+    }
+
+    .secao-formulario .container {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 40px;
+      align-items: start;
+    }
+
+    /* ---------- FORMULÁRIO ---------- */
+    .formulario {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 40px;
+      border: 1px solid #e5e0d8;
+      box-shadow: 0 4px 20px rgba(26, 58, 92, 0.06);
+    }
+
+    .formulario h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      color: #1a3a5c;
+      margin-bottom: 6px;
+    }
+
+    .formulario .subtitulo-form {
+      font-size: 14px;
+      color: #6b7280;
+      margin-bottom: 28px;
+    }
+
+    /* Grupos de campo */
+    .campo-grupo {
+      margin-bottom: 20px;
+    }
+
+    .campo-grupo label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: #374151;
+      margin-bottom: 6px;
+      letter-spacing: 0.3px;
+    }
+
+    .campo-grupo input,
+    .campo-grupo select,
+    .campo-grupo textarea {
+      width: 100%;
+      padding: 12px 16px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      color: #2d2d2d;
+      background-color: #fafaf8;
+      border: 1.5px solid #d1cfc9;
+      border-radius: 8px;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .campo-grupo input:focus,
+    .campo-grupo select:focus,
+    .campo-grupo textarea:focus {
+      border-color: #1a3a5c;
+      box-shadow: 0 0 0 3px rgba(26, 58, 92, 0.08);
+    }
+
+    .campo-grupo textarea {
+      resize: vertical;
+      min-height: 260px;
+      line-height: 1.7;
+    }
+
+    /* Linha com dois campos lado a lado */
+    .linha-dupla {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    /* Botão de envio */
+    .botao-enviar {
+      display: block;
+      width: 100%;
+      background-color: #1a3a5c;
+      color: #ffffff;
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 15px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 8px;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .botao-enviar:hover {
+      background-color: #4ca0e9;
+      transform: scaleX(1.1);
+      box-shadow: #1a3a5c;
+
+    }
+
+    /* Mensagem de sucesso (oculta por padrão) */
+    .mensagem-sucesso {
+      display: none;
+      background-color: #ecfdf5;
+      border: 1.5px solid #7ec8a0;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-top: 20px;
+      color: #1e6b52;
+      font-size: 15px;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    /* ---------- DICAS LATERAIS ---------- */
+    .dicas {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .dica-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 24px;
+      border: 1px solid #e5e0d8;
+    }
+
+    .dica-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      color: #1a3a5c;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .dica-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .dica-card ul li {
+      font-size: 13px;
+      color: #6b7280;
+      padding: 5px 0;
+      padding-left: 16px;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .dica-card ul li::before {
+      /*psedo-elemento*/
+      content: '→';
+      /*coloca essa seta*/
+      position: absolute;
+      left: 0;
+      color: #7ec8a0;
+      font-weight: 700;
+    }
+
+    /* ---------- RODAPÉ ---------- */
+    .rodape {
+      background-color: #0a522e;
+      color: #8bafc8;
+      text-align: center;
+      padding: 28px 0;
+      font-size: 13px;
+    }
+
+    /* ---------- RESPONSIVO ---------- */
+    @media (max-width: 900px) {
+      .secao-formulario .container {
+        grid-template-columns: 1fr;
+      }
+
+      .dicas {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .linha-dupla {
+        grid-template-columns: 1fr;
+      }
+
+      .pagina-topo h1 {
+        font-size: 26px;
+      }
+
+      .formulario {
+        padding: 24px 20px;
+      }
+
+      .dicas {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @keyframes runtwo {
+
+      /*Sempre está relacionado a uma animação*/
+      from {
+        transform: translateY(-20px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    @keyframes textruntwo{/*Sempre está relacionado a uma animação*/
+    from{
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to{
+        transform:translateX(0);
+        opacity:1;
+    }
+}
+  </style>
+</head>
+
+<body>
+
+  <!-- CABEÇALHO -->
+  <header class="cabecalho">
+    <div class="container">
+      <span class="logo-texto">✍️ Redação <strong>Pro</strong></span>
+      <nav class="nav">
+        <a href="../index.html">Início</a>
+        <a href="pagina2.html">Enviar Redação</a>
+        <a href="pagina3.html">Repertórios</a>
+        <a href="pagina4.html">Estrutura ENEM</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- TOPO DA PÁGINA -->
+  <section class="pagina-topo">
+    <div class="container">
+      <p class="etiqueta">Tópico 01</p>
+      <h1 class="movetexttwo">Envie sua Redação</h1>
+      <p>Escreva sua redação abaixo e envie para receber correção e dicas personalizadas.</p>
+    </div>
+  </section>
+
+  <section>
+    <img src="../Imagens/Lapisepapel.jpg" alt="Lapis e Papel" class="imgtext">
+    <h1 class="tittextp">Caro estudante,</h1>
+    <p class="textprincipal">
+      A seguir está um formulário para o envio de sua redação; para ter acesso a mais ferramentas
+      e dicas sobre nossa tão amada redação do ENEM se aventure nesse site, que foi feito com muito carinho por uma
+      estudante
+      que compreende e entende como é difícil a jornada acadêmica. Pensando nisso, disponibilizei aqui tópicos, assuntos
+      e recursos
+      que são a base para que você faça uma boa redação. Divirta-se! Bons estudos!
+
+    </p>
+
+  </section>
+
+  <!-- FORMULÁRIO + DICAS -->
+  <section class="secao-formulario">
+    <div class="container">
+
+      <!-- FORMULÁRIO -->
+      <div class="formulario">
+        <h2>Formulário de envio</h2>
+        <p class="subtitulo-form">Preencha todos os campos e clique em enviar.</p>
+
+        <!--
+          =====================================================
+          FORMSPREE — serviço gratuito de envio de formulários
+        -->
+        <form action="https://formspree.io/f/xzeblgrn" method="POST">
+
+          <!-- Campo oculto: define o assunto do e-mail que você receberá, hidden=campo invisível, -->
+          <input type="hidden" name="_subject" value="Nova redação recebida — Redação Monitoria" />
+
+          <!-- Campo oculto: após enviar, redireciona para uma página de obrigado -->
+          <input type="hidden" name="_next" value="obrigado.html" />
+
+          <div class="linha-dupla">
+            <div class="campo-grupo">
+              <label for="nome">Seu nome</label>
+              <input type="text" id="nome" name="nome" placeholder="Ex: Maria Silva" required />
+            </div>
+            <div class="campo-grupo">
+              <label for="email">Seu e-mail</label>
+              <input type="email" id="email" name="_replyto" placeholder="Ex: maria@email.com" required />
+            </div>
+          </div>
+
+          <div class="campo-grupo">
+            <label for="tema">Tema da redação</label>
+            <input type="text" id="tema" name="tema" placeholder="Ex: Desafios da saúde mental no Brasil" required />
+          </div>
+
+          <div class="campo-grupo">
+            <label for="turma">Turma / Série /Curso</label>
+            <select id="turma" name="turma">
+              <option value="">Selecione sua turma</option>
+              <option value="1ano">1º Ano do Ensino Médio_Técnico em Informática</option>
+              <option value="2ano">2º Ano do Ensino Médio_Técnico em Informática</option>
+              <option value="3ano">3º Ano do Ensino Médio_Técnico em Informática</option>
+              <option value="1ano">1º Ano do Ensino Médio_Técnico em Design Gráfico</option>
+              <option value="2ano">2º Ano do Ensino Médio_Técnico em Design Gráfico</option>
+              <option value="3ano">3º Ano do Ensino Médio_Técnico em Design Gráfico</option>
+              <option value="1ano">1º Ano do Ensino Médio_Técnico em Produção de Moda</option>
+              <option value="2ano">2º Ano do Ensino Médio_Técnico em Produção de Moda</option>
+              <option value="3ano">3º Ano do Ensino Médio_Técnico em Produção de Moda</option>
+              <option value="Outraescola">Ensino Médio, sem ser no IFSULDEMINAS-Campus Passos </option>
+              <option value="cursinho">Cursinho / Pré-vestibular</option>
+            </select>
+          </div>
+
+          <div class="campo-grupo">
+            <label for="redacao">Sua redação</label>
+            <textarea id="redacao" name="redacao"
+              placeholder="Escreva aqui sua redação completa (introdução, desenvolvimento e conclusão)..."
+              required></textarea>
+          </div>
+
+          <button type="submit" class="botao-enviar">
+            📩 Enviar Redação
+          </button>
+
+        </form>
+      </div>
+
+      <!-- DICAS LATERAIS -->
+      <aside class="dicas"><!--tag que relaciona conteúdos-->
+
+        <div class="dica-card">
+          <h3>📝 Estrutura básica</h3>
+          <ul>
+            <li>Introdução que apresente repertório, tema e tese</li>
+            <li>1º parágrafo de desenvolvimento</li>
+            <li>2º parágrafo de desenvolvimento</li>
+            <li>Conclusão com proposta</li>
+          </ul>
+        </div>
+
+        <div class="dica-card">
+          <h3>✅ Antes de enviar</h3>
+          <ul>
+            <li>Revise a ortografia</li>
+            <li>Verifique a concordância verbal</li>
+            <li>Confirme se a proposta está clara</li>
+            <li>Mínimo de 7 linhas por parágrafo</li>
+          </ul>
+        </div>
+
+        <div class="dica-card">
+          <h3>📏 Tamanho ideal e Linguagem</h3>
+          <ul>
+            <li>Entre 25 e 30 linhas</li>
+            <li>Máximo: 30 linhas no ENEM</li>
+            <li>Não deixe linhas em branco</li>
+            <li>Use linguagem formal</li>
+          </ul>
+        </div>
+
+      </aside>
+
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="rodape">
+    <div class="container">
+      <p>© 2026 Redação-Monitoria de Língua Portuguesa — Feito com dedicação para estudantes do ENEM</br>
+        Feito com auxílio da IA (figma)<br>
+        Aluna:Elisa Silva Bueno</br>
+        Curso:Técnico em Informática Integrado ao Ensino Médio</br>
+        2º Período</br>
+        Escola:IFSuldeminas Campus Passos</p>
+        email para contato: elisa.silva@alunos.ifsuldeminas.edu.br
+    </div>
+  </footer>
+
+  <!-- JavaScript removido — o formulário agora usa Formspree para envio real -->
+
+</body>
+
+</html>
